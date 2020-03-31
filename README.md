@@ -1,4 +1,4 @@
 # FreeCodeCamp_ResponsiveWebDesign
 
-Projects:
-- Tribute Page: codepen.io/AlicjaHelenaM/full/BaNbRZB
+Projects on [CodePen](codepen.io):
+- [Tribute Page](https://codepen.io/AlicjaHelenaM/full/BaNbRZB)
