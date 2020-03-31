@@ -1,0 +1,231 @@
+<style>
+	html {
+	  /* Setting a base font size of 10px give us easier rem calculations (relative to font-size of the root element)
+	  Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px etc.*/
+	  font-size: 10px;
+	}
+	body {
+	  font-family: Arial;
+	  font-size: 1.5rem;
+	  line-height: 1.5;
+	  text-align: center;
+	  color: #333;
+	  margin: 0;
+	}
+
+	h1 {
+	  font-size: 4rem;
+	  margin-bottom: 0;
+	}
+
+	@media (max-width: 460px) {
+	  h1 {
+		font-size: 3.5rem;
+		line-height: 1.2;
+	  }
+	}
+
+	h2 {
+	  font-size: 2.5rem;
+	}
+
+	a {
+	  color: #477ca7;
+	}
+
+	a:visited {
+	  color: #74638f;
+	}
+
+	#main {
+	  margin: 30px 8px;
+	  padding: 15px;
+	  border-radius: 5px;
+	  background: #eee;
+	}
+
+	@media (max-width: 460px) {
+	  #main {
+		margin: 0;
+	  }
+	}
+
+	img {
+	  max-width: 100%;
+	  display: block;
+	  height: auto;
+	  margin: 0 auto;
+	}
+
+	#img-div {
+	  background: white;
+	  padding: 10px;
+	  margin: 0;
+	}
+
+	#img-caption {
+	  margin: 15px 0 5px 0;
+	}
+
+	@media (max-width: 460px) {
+	  #img-caption {
+		font-size: 1rem;
+	  }
+	}
+
+	#headline {
+	  margin: 50px 0;
+	  text-align: center;
+	}
+
+	ul {
+	  max-width: 550px;
+	  margin: 0 auto 50px auto;
+	  text-align: left;
+	  line-height: 1.6;
+	}
+
+	li {
+	  margin: 16px 0;
+	}
+
+	blockquote {
+	  font-style: italic;
+	  max-width: 545px;
+	  margin: 0 auto 50px auto;
+	  text-align: left;
+	}
+</style>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<main id="main">
+  <h1 id="title">
+    Professor Stephen Hawking
+  </h1>
+    <p>
+      The man who explained the universe
+    </p>
+    <figure id="img-div">
+    <img
+      id="image"
+src="https://lh3.googleusercontent.com/proxy/ITWV5uKwH4a3gK8E5os0Q_FUo14OMY4F4kCIj6ciiP21siy9pcfvlPHg76p6MUsbiioPbK0oSJdYfco48K2-r_PEhwDCQTFFpS3b1tusToHEcP7aAhdUJwtI83GgC1CHaY93Gnw8E9khsvkpUM5JpbLUWA5PI5zHjV4XlS10SPTlNw"
+      alt="image of Stephen Hawking"
+    />
+    <figcaption id="img-caption">
+      NASA StarChild image of Stephen Hawking, the cosmologist and divulging scientist, who was elected a member of the Royal Society in 1974.
+    </figcaption>
+  </figure>
+  <section id="tribute-info">
+    <h2 id="headline">
+          Here's a brief history of Professor Hawking's life:
+    </h2>
+    <ul>
+      <li>
+        <strong>1942</strong>
+        - Born in Oxford, England 8 January 1942 (300 years after the death of Galileo).
+      </li>
+      <li>
+        <strong>1953</strong>
+        - Starts St Albans school in North London, where he develops a passion for mathematics.
+      </li>
+      <li>
+        <strong>1959</strong>
+        - Specialises in physics at University College Oxford. Graduates with a first class degree in natural sciences. 
+      </li>
+      <li>
+        <strong>1962</strong>
+        - With a degree in physics from the University of Oxford, he undertakes research in cosmology at Cambridge, completing a doctorate thesis entitled "Properties of the Expanding Universes".
+      </li>
+      <li>
+        <strong>1963</strong>
+        - Begins research in cosmology and general relativity at the University of Cambridge. He is diagnosed with an "incurable disease" at the age of 21, which is later found to be Amyotrophic Lateral Sclerosis (ALS), a rare progressive disease that effects movement and speech. He continues with his research.
+      </li>
+      <li>
+        <strong>1966</strong>
+        - Completes his doctorate and is awarded a fellowship at Gonville and Caius College, Cambridge. He works on singularities in the theory of general relativity and applies his ideas to the study of black holes. Collaborates with mathematician Roger Penrose, who was working at Birkbeck College in London.
+      </li>
+      <li>
+        <strong>1970</strong>
+        - Discovers a remarkable property: by using quantum theory and general relativity he is able to show that black holes can emit radiation.
+      </li>
+      <li>
+        <strong>1973</strong>
+        - Joins the department of applied mathematics and theoretical physics at Cambridge. In the same year he discovers, to his disbelief, that black holes could leak energy and particles into space, and even explode in a fountain of high-energy sparks.
+      </li>
+      <li>
+        <strong>1974</strong>
+        - His breakthrough discovery is published in the journal Nature, in a paper entitled Black hole Explosion? At 32 becone of the youngest members of the Royal Society.
+      </li>
+      <li>
+        <strong>1977</strong>
+        - Appointed professor of gravitational physics at Cambridge.
+      </li>
+      <li>
+        <strong>1979</strong>
+        - Appointed Lucasian professor of mathematics at Cambridge (a chair held by Sir Isaac Newton in 1663). 
+      </li>
+      <li>
+        <strong>1982</strong>
+        - Awarded a CBE by the Queen.
+      </li>
+      <li>
+        <strong>1988</strong>
+        - Publishes <strong>A Brief History of Time: From the Big Bang to Black Holes</strong>, a classic introduction to today's most important scientific ideas about the cosmos. Recorded in the 1998 Guinness Book of Records as an all-time bestseller.
+      </li>      
+      <li>
+        <strong>1989</strong>
+        - Made a companion of honour.
+      </li>      
+      <li>
+        <strong>1993</strong>
+        - Publishes <strong>Black Holes and Baby Universes, and other Essays</strong>, a collection of scientific articles exploring ways in which the universe may be governed.
+      </li>      
+      <li>
+        <strong>1998</strong>
+        - Publishes <strong>Stephen Hawking's Universe: The Cosmos Explained</strong>, a book about the basis of our existence and of everything around us.
+      </li>      
+      <li>
+        <strong>2001</strong>
+        - Releases <strong>Universe in a Nutshell</strong> in the UK, a book that unravels the mysteries of recent breakthroughs in physics.
+      </li>      
+      <li>
+        <strong>2002</strong>
+        - Releases <strong>On the Shoulders of Giants, The Great Works of Physics and Astronomy</strong>, an exploration of some of the greatest visionaries in the history of science including Copernicus, Kepler, Galileo, Newton and Einstein. Publishes <strong>The Theory of Everything: The Origin and Fate of the Universe</strong>, a book that presents the most complex theories of physics past and present.
+      </li>      
+      <li>
+        <strong>2004</strong>
+        - Announces that he has solved the Black Hole paradox, which has been a troubling scientists for years. He presents his most recent findings at the international conference on general relativity and gravitation in Dublin.
+      </li>      
+      <li>
+        <strong>2007</strong>
+        - Goes on a weightless flight in the United States as a prelude to a hoped-for sub-orbital spaceflight.
+      </li>      
+      <li>
+        <strong>2014</strong>
+        - The Hawking biopic The Theory of Everything, by director James Marsh, is released. British actor Eddie Redmayne goes on to win an Oscar for his portrayal of the scientist.own
+      </li>
+      <li>
+        <strong>2018</strong>
+        - dies in Cambridge, England, on 14 March 2018
+      </li>
+    </ul>
+    <blockquote
+      cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm"
+    >
+      <p>
+        "Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious."
+      </p>
+      <cite>-- Stephen William Hawking</cite>
+    </blockquote>
+    <h3>
+      You can read more about the Professor on his
+      <a
+        id="tribute-link"
+        href="https://en.wikipedia.org/wiki/Stephen_Hawking"
+        target="_blank"
+       >
+        Wikipedia entry
+      </a>
+    </h3>
+  </section>
+</main>
