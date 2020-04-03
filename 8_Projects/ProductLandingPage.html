@@ -1,0 +1,311 @@
+<style>
+	@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+	@import "https://fonts.googleapis.com/css?family=Indie+Flower";
+
+	* {
+	  margin: 0;
+	  padding: 0;
+	  box-sizing: border-box;
+	}
+
+	body {
+	  background-image: 
+		linear-gradient(
+		  115deg,
+		  rgba(255,255,255, 0.7),
+		  rgba(255,255,255, 0.7)
+		),
+		url(https://wallpaperaccess.com/full/215028.jpg);
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  font-family: 'Lato', sans-serif;
+	}
+
+	li {
+	  list-style: circle;
+	}
+
+	a {
+	  color: #000;
+	  text-decoration: none;
+	}
+
+	.container {
+	  max-width: 1000px;
+	  width: 100%;
+	  margin: 0 auto;
+	}
+
+	.btn {
+	  color: #4CAF50;
+	  padding: 0 20px;
+	  height: 40px;
+	  font-size: 1em;
+	  font-weight: 900;
+	  border: 2px #4CAF50 solid;
+	  border-radius: 25px;
+	  background: rgba(255,255,255, 0.4); 
+	  cursor: pointer;
+	}
+
+	header {
+	  position: fixed;
+	  top: 0;
+	  min-height: 75px;
+	  padding: 0px 20px;
+	  justify-content: space-around;
+	  align-items: center;
+	}
+
+	.logo {
+	  width: 10vw;
+	  margin-bottom: 30px;
+	}
+
+	.logo > img {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  text-align: center;
+	  margin-left: 5px;
+	  margin-top: 20px;
+	}
+
+	nav {
+	  font-weight: 100;
+	  font-size: 20px;
+	  line-height: 1.6;
+	  margin-left: 24px;
+	}
+
+	#nav-bar :hover {color: green;}
+
+	}
+
+	#hero {
+	  display: flex;
+	  flex-direction: column;
+	}
+
+	#hero > h1 {
+	  font-family: "Indie Flower";
+	  font-weight: 900;
+	  text-align: center;
+	  color: green;
+	  height: 200px;
+	  font-size: 55px;
+	  margin-top: 50px;
+	}
+
+	#catalog {
+	  margin-top: 30px;
+	}
+
+	#catalog {
+	  margin-top: 60px;
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: center;
+	}
+
+	.product {
+	  display: flex;
+	  background-color: rgba(255,255,255, 0.7);
+	  flex-direction: column;
+	  align-items: center;
+	  text-align: center;
+	  width: calc(100%  / 3);
+	  margin: 10px;
+	  border: 1px solid #000;
+	  border-radius: 3px;
+	}
+
+	.product > .level {
+	  color: black;
+	  padding: 15px 0;
+	  width: 100%;
+	  height: 13%;
+	  text-transform: uppercase;
+	  font-weight: 700;
+	}
+
+	.product > h2 {
+	  margin-top: 15px;
+	}
+
+	.product > h3 {
+	  padding: 5px 0;
+	  font-size: 18px;
+	  font-weight: 10;
+	}
+
+	.product > button {
+	  margin: 15px 0;
+	  font-weight: 400;
+	}
+
+	.product > button:hover {
+	  background-color: orange;
+	  transition: background-color 1s;
+	}
+
+	@media (max-width: 800px) {
+	  #pricing {
+		flex-direction: column;
+	  }
+	  .product {
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	  }
+	}
+
+	#basics {
+	  margin-top: 50px;
+	  display: flex;
+	  justify-content: center;
+	}
+
+	#contact{
+	  margin-top: 55px;
+	  margin-bottom: 20px;
+	}
+
+	#contact > h3 {
+	  font-weight: 900;
+	}
+
+	#contact > h4 {
+	  font-weight: 1;
+	}
+
+	#contact input[type="email"] {
+	  max-width: 275px;
+	  width: 100%;
+	  padding: 5px;
+	}
+
+	#contact input[type="submit"] {
+	  max-width: 150px;
+	  width: 100%;
+	  height: 30px;
+	  margin: 15px 0;
+	}
+
+	#contact input[type="submit"]:hover {
+	  background-color: orange;
+	  transition: background-color 1s;
+	}
+
+</style>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+      <img
+        id="header-img"
+        src="https://special-sources.com/wp-content/uploads/2018/04/CC-stacked-large-trans.png"
+        alt="crooked cactus logo"
+        width="150" 
+        height="150"
+      />
+    </div>
+
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#catalog">Catalog</a></li>
+        <li><a class="nav-link" href="#basics">Basics</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <section id="hero">
+      <h1>Crooked Cactus<br>Cacti & Succulents</h1>
+    </section>
+    
+    <section id="catalog">
+      
+      <div class="product" id="tenor">
+        <div class="level">Echinofossulocactus multicostatus</div>
+        <img
+        id="plant-1-img"
+        src="https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/71789475_411809342836204_1739008755879153927_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=104&_nc_ohc=HIRFernyBE8AX8E1yyI&oh=e10bf4a58a5dac12274553bcc22459f9&oe=5E8FD656"
+        alt="platn 1 logo"
+        width="300" 
+        height="300"
+      />
+        <h2>€9</h2>
+        <h3>Brain Plant</h3>
+        <button class="btn">Add to cart</button>
+      </div>
+      
+      <div class="product" id="bass">
+        <div class="level">Echeveria</div>
+        <img
+        id="plant-2-img"
+        src="https://www.cactusplaza.com/wp-content/uploads/2016/01/echeveria-collectie_2.jpg"
+        alt="platn 2 logo"
+        width="300" 
+        height="300"
+      />
+        <h2>€10</h2>
+        <h3>Purple Pearl</h3>
+        <button class="btn">Add to cart</button>
+      </div>
+      
+      <div class="product" id="valve">
+        <div class="level">Lithops</div>
+        <img
+        id="plant-3-img"
+        src="https://www.sunnyplants.com/wp-content/uploads/lithops-collection-1.jpg"
+        alt="platn 3 logo"
+        width="300" 
+        height="300"
+      />
+        <h2>€15</h2>
+        <h3>Living Stone</h3>
+        <button class="btn">Add to cart</button>
+      </div>
+    </section>
+    
+    <section id="basics">
+        <iframe 
+                id="video" 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/xNbJhaUOf1E" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+      </iframe>
+    </section>
+    <section id="contact">
+      <h3>How about €5 off your next order?</h3>
+      <h4>Join Crooked Cactus newsletter for €5 off your next order as well as new products alerts, care tips and more...</h4>
+      <form
+            id="form" 
+            action="https://www.freecodecamp.com/email-submit"
+      >
+      <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+      />
+      <input
+             id="submit" 
+             type="submit" 
+             value="Sign me up!" 
+             class="btn" 
+      />
+    </form>
+    </section>
+  </div>  
+  
