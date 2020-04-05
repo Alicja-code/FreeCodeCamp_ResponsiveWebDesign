@@ -1,0 +1,227 @@
+<style>
+
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
+
+</style>
+
+<nav id="navbar">
+  <header>Folium Documentation</header>
+  <img 
+       src="https://python-visualization.github.io/folium/_images/folium_logo.jpg"
+       class="center"
+       >
+  <ul>
+    <li><a class="nav-link" href="#Intro">Intro</a></li>
+    <li>
+      <a class="nav-link" href="#Concepts">Concepts</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#Installing">Installing</a>
+    </li>
+    <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+
+
+<main id="main-doc">
+  
+  <section class="main-section" id="Intro">
+    <header>Intro</header>
+    <article>
+      <p>Python data, leaflet.js maps</p>
+      <p>folium builds on the data wrangling strengths of the Python ecosystem and the mapping strengths of the leaflet.js library. Manipulate your data in Python, then visualize it in on a Leaflet map via folium.</p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Concepts">
+    <header>Concepts</header>
+    <article>
+      <p>folium makes it easy to visualize data that’s been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for choropleth visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.</p>
+      <p> The library has a number of built-in tilesets from OpenStreetMap, Mapbox, and Stamen, and supports custom tilesets with Mapbox or Cloudmade API keys. folium supports both Image, Video, GeoJSON and TopoJSON overlays.<p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Installing">
+    <header>Installing</header>
+    <article>
+      <ul>
+        <p>Requirements</p>
+        <code>branca, jinja2 and requests.</code>
+        <p>Some functionalities may require extra dependencies numpy, pandas, geopandas, altair, etc.</p>
+        <p>Installation</p>
+        <code>$ pip install folium</code>
+        <p>or</p>
+        <code>$ conda install folium -c conda-forge</code>
+      </ul>
+    </article>
+  </section>
+
+  <section class="main-section" id="Hello_world">
+    <header>Hello world</header>
+    <article>
+      <p>Quickstart</p>
+      <ul>
+        <li>To create a base map, simply pass your starting coordinates to Folium:</li>
+        <code>import folium</code>
+        <code>m = folium.Map(location=[45.5236, -122.6750])</code>
+        <li>To display it in a Jupyter notebook, simply ask for the object representation:</li>
+        <code>m</code>
+        <li>to save it in a file,</li>
+        <code>m.save('index.html')</code>
+        <li>The default tiles are set to OpenStreetMap, but Stamen Terrain, Stamen Toner, Mapbox Bright, and Mapbox Control Room, and many others tiles are built in.</li>
+        <code>folium.Map(location=[45.5236, -122.6750], tiles='Stamen Toner', zoom_start=13)</code>
+        <li>One can use Cloudmade or Mapbox custom tilesets–simply pass your key to the API_key keyword:</li>
+        <code>folium.Map(location=[45.5236, -122.6750], tiles='Mapbox', API_key='your.API.key')</code>
+        <li>Lastly, Folium supports passing any leaflet.js compatible custom tileset:</li>
+        <code>folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles='http://{s}.tiles.yourtiles.com/{z}/{x}/{y}.png', attr='My Data Attribution')</code>
+      </ul>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <p>All the documentation in this page is taken from
+        <a
+           href="https://python-visualization.github.io/folium/"
+           target="_blank"
+           >folium documentation</a
+          >
+    </article>
+  </section>
+  
+</main>
