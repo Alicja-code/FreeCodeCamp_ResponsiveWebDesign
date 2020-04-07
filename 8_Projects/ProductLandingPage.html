@@ -1,205 +1,194 @@
 <style>
-	@import "https://fonts.googleapis.com/css?family=Lato:400,700";
-	@import "https://fonts.googleapis.com/css?family=Indie+Flower";
+/* Project objectives https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page */
+/* based on example provided by FCC https://codepen.io/freeCodeCamp/full/RKRbwL */
 
-	* {
-	  margin: 0;
-	  padding: 0;
-	  box-sizing: border-box;
-	}
+@import "https://fonts.googleapis.com/css?family=KoHo";
+@import "https://fonts.googleapis.com/css?family=Indie+Flower";
 
-	body {
-	  background-image: 
-		linear-gradient(
-		  115deg,
-		  rgba(255,255,255, 0.7),
-		  rgba(255,255,255, 0.7)
-		),
-		url(https://wallpaperaccess.com/full/215028.jpg);
-	  background-size: cover;
-	  background-repeat: no-repeat;
-	  background-position: center;
-	  font-family: 'Lato', sans-serif;
-	}
+* {`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-	li {
-	  list-style: circle;
-	}
+body {
+  background-image: 
+    linear-gradient(
+      rgba(255,255,255, 0.7),
+      rgba(255,255,255, 0.7)
+    ),
+    url(https://wallpaperaccess.com/full/215028.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'KoHo';
+}
 
-	a {
-	  color: #000;
-	  text-decoration: none;
-	}
+li {
+  list-style: circle;
+}
 
-	.container {
-	  max-width: 1000px;
-	  width: 100%;
-	  margin: 0 auto;
-	}
+a {
+  color: #000;
+  text-decoration: none;
+}
 
-	.btn {
-	  color: #4CAF50;
-	  padding: 0 20px;
-	  height: 40px;
-	  font-size: 1em;
-	  font-weight: 900;
-	  border: 2px #4CAF50 solid;
-	  border-radius: 25px;
-	  background: rgba(255,255,255, 0.4); 
-	  cursor: pointer;
-	}
+a:hover{
+  color: #37af65;
+  font-weight: 900;
+}
 
-	header {
-	  position: fixed;
-	  top: 0;
-	  min-height: 75px;
-	  padding: 0px 20px;
-	  justify-content: space-around;
-	  align-items: center;
-	}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-	.logo {
-	  width: 10vw;
-	  margin-bottom: 30px;
-	}
+.button {
+  color: #4CAF50;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  border: 2px #4CAF50 solid;
+  border-radius: 25px;
+  background: rgba(255,255,255, 0.4); 
+  cursor: pointer;
+}
 
-	.logo > img {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  text-align: center;
-	  margin-left: 5px;
-	  margin-top: 20px;
-	}
+.button:hover{
+  background-color: orange;
+  transition: background-color 1s;
+}
 
-	nav {
-	  font-weight: 100;
-	  font-size: 20px;
-	  line-height: 1.6;
-	  margin-left: 24px;
-	}
+header {
+  position: fixed;
+  min-height: 75px;
+  padding: 0px 20px;
+  justify-content: space-around;
+  align-items: center;
+}
 
-	#nav-bar :hover {color: green;}
+.logo {
+  width: 10vw;
+  margin-bottom: 30px;
+}
 
-	}
+#header-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 5px;
+  margin-top: 20px;
+}
 
-	#hero {
-	  display: flex;
-	  flex-direction: column;
-	}
+nav {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.8;
+  margin-left: 24px;
+}
 
-	#hero > h1 {
-	  font-family: "Indie Flower";
-	  font-weight: 900;
-	  text-align: center;
-	  color: green;
-	  height: 200px;
-	  font-size: 55px;
-	  margin-top: 50px;
-	}
+#welcome{
+  display: flex;
+  flex-direction: column;
+  font-family: "Indie Flower";
+  font-weight: 900;
+  text-align: center;
+  color: #2c8a50;
+  height: 200px;
+  font-size: 45px;
+  margin-bottom: 150px;
+}
 
-	#catalog {
-	  margin-top: 30px;
-	}
+#catalog {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
 
-	#catalog {
-	  margin-top: 60px;
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: center;
-	}
+.product {
+  background-color: rgba(255,255,255, 0.7);
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
 
-	.product {
-	  display: flex;
-	  background-color: rgba(255,255,255, 0.7);
-	  flex-direction: column;
-	  align-items: center;
-	  text-align: center;
-	  width: calc(100%  / 3);
-	  margin: 10px;
-	  border: 1px solid #000;
-	  border-radius: 3px;
-	}
+.product > .level {
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  height: 13%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-	.product > .level {
-	  color: black;
-	  padding: 15px 0;
-	  width: 100%;
-	  height: 13%;
-	  text-transform: uppercase;
-	  font-weight: 700;
-	}
+.product > h2 {
+  margin-top: 15px;
+}
 
-	.product > h2 {
-	  margin-top: 15px;
-	}
+.product > h3 {
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 10;
+}
 
-	.product > h3 {
-	  padding: 5px 0;
-	  font-size: 18px;
-	  font-weight: 10;
-	}
+.product > button {
+  margin: 15px 0;
+  font-weight: 400;
+}
 
-	.product > button {
-	  margin: 15px 0;
-	  font-weight: 400;
-	}
+@media (max-width: 1000px) {
+  #catalog {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
 
-	.product > button:hover {
-	  background-color: orange;
-	  transition: background-color 1s;
-	}
+#basics {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
 
-	@media (max-width: 800px) {
-	  #pricing {
-		flex-direction: column;
-	  }
-	  .product {
-		max-width: 300px;
-		width: 100%;
-		margin: 0 auto;
-		margin-bottom: 10px;
-	  }
-	}
+#contact{
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
 
-	#basics {
-	  margin-top: 50px;
-	  display: flex;
-	  justify-content: center;
-	}
+#contact > h3 {
+  font-weight: 900;
+}
 
-	#contact{
-	  margin-top: 55px;
-	  margin-bottom: 20px;
-	}
+#contact > h4 {
+  font-weight: 1;
+}
 
-	#contact > h3 {
-	  font-weight: 900;
-	}
+#contact input[type="email"] {
+  max-width: 275px;
+  width: 100%;
+  padding: 8px;
+}
 
-	#contact > h4 {
-	  font-weight: 1;
-	}
-
-	#contact input[type="email"] {
-	  max-width: 275px;
-	  width: 100%;
-	  padding: 5px;
-	}
-
-	#contact input[type="submit"] {
-	  max-width: 150px;
-	  width: 100%;
-	  height: 30px;
-	  margin: 15px 0;
-	}
-
-	#contact input[type="submit"]:hover {
-	  background-color: orange;
-	  transition: background-color 1s;
-	}
+#contact input[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  height: 35px;
+}
 
 </style>
+
+<!-- Project objectives https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page -->
+<!-- based on example provided by FCC https://codepen.io/freeCodeCamp/full/RKRbwL​ -->
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
@@ -225,13 +214,13 @@
   </header>
   
   <div class="container">
-    <section id="hero">
+    <section id="welcome">
       <h1>Crooked Cactus<br>Cacti & Succulents</h1>
     </section>
     
     <section id="catalog">
       
-      <div class="product" id="tenor">
+      <div class="product" id="echinofossulocactus-multicostatus">
         <div class="level">Echinofossulocactus multicostatus</div>
         <img
         id="plant-1-img"
@@ -242,10 +231,10 @@
       />
         <h2>€9</h2>
         <h3>Brain Plant</h3>
-        <button class="btn">Add to cart</button>
+        <button class="button">Add to cart</button>
       </div>
       
-      <div class="product" id="bass">
+      <div class="product" id="echeveria">
         <div class="level">Echeveria</div>
         <img
         id="plant-2-img"
@@ -256,10 +245,10 @@
       />
         <h2>€10</h2>
         <h3>Purple Pearl</h3>
-        <button class="btn">Add to cart</button>
+        <button class="button">Add to cart</button>
       </div>
       
-      <div class="product" id="valve">
+      <div class="product" id="lithops">
         <div class="level">Lithops</div>
         <img
         id="plant-3-img"
@@ -270,7 +259,7 @@
       />
         <h2>€15</h2>
         <h3>Living Stone</h3>
-        <button class="btn">Add to cart</button>
+        <button class="button">Add to cart</button>
       </div>
     </section>
     
@@ -303,9 +292,8 @@
              id="submit" 
              type="submit" 
              value="Sign me up!" 
-             class="btn" 
+             class="button" 
       />
     </form>
     </section>
   </div>  
-  
