@@ -1,53 +1,52 @@
 <style>
 
+/* Project objectives https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page */
+/* based on example provided by FCC https://codepen.io/freeCodeCamp/full/NdrKKL */
+
+@import url('https://fonts.googleapis.com/css?family=Fira Code');
+
 html,
 body {
   min-width: 290px;
-  color: #4d4e53;
-  background-color: #ffffff;
-  font-family: "Open Sans", Arial, sans-serif;
+  color: lime;
+  background-color: white smoke;
+  font-family: "Fira Code";
   line-height: 1.5;
+  font-weight: thin;
 }
 
 #navbar {
+  background-color: white smoke;
   position: fixed;
-  min-width: 290px;
+  min-width: 300px;
   top: 0px;
   left: 0px;
   width: 300px;
   height: 100%;
-  border-right: solid;
-  border-color: rgba(0, 22, 22, 0.4);
+  border-right: solid 2px;
 }
 
-header {
-  color: black;
-  margin: 10px;
-  text-align: center;
-  font-size: 1.8em;
-  font-weight: thin;
-}
-
-.center {
+#navbar img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-#main-doc header {
-  text-align: left;
-  margin: 0px;
+#navbar header {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
 }
 
 #navbar ul {
-  height: 88%;
   padding: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #navbar li {
-  color: #4d4e53;
+  color: #696969;
   border-top: 1px solid;
   list-style: none;
   position: relative;
@@ -57,49 +56,55 @@ header {
 #navbar a {
   display: block;
   padding: 10px 30px;
-  color: #4d4e53;
+  color: #696969;
   text-decoration: none;
   cursor: pointer;
+}
+
+#navbar a:hover {
+  background-color: lime;
+  color: white;
 }
 
 #main-doc {
   position: absolute;
   margin-left: 310px;
   padding: 20px;
-  margin-bottom: 110px;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+  font-size: 1.8em;
+  font-weight: thin;
+  color: black;
 }
 
 section article {
-  color: #4d4e53;
+  color: #696969;
   margin: 15px;
-  font-size: 0.96em;
+  margin-bottom: 50px;
 }
 
-section li {
-  margin: 15px 0px 0px 20px;
+section article a:hover {
+  color: lime;
+}
+
+section article ul {
+  margin-left: -40px;
 }
 
 code {
+  color: lime;
   display: block;
-  text-align: left;
-  white-space: pre;
-  position: relative;
-  word-break: normal;
-  word-wrap: normal;
   line-height: 2;
-  background-color: #f7f7f7;
-  padding: 15px;
+  background-color: black;
+  padding: 10px;
   margin: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
-@media only screen and (max-width: 815px) {
-  /* For mobile phones: */
-  #navbar ul {
-    border: 1px solid;
-    height: 207px;
-  }
-
+@media (max-width: 815px) {
   #navbar {
     background-color: white;
     position: absolute;
@@ -107,51 +112,33 @@ code {
     padding: 0;
     margin: 0;
     width: 100%;
-    max-height: 275px;
     border: none;
-    z-index: 1;
-    border-bottom: 2px solid;
   }
 
   #main-doc {
     position: relative;
     margin-left: 0px;
-    margin-top: 270px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #main-doc {
-    margin-left: -10px;
-  }
-
-  code {
-    margin-left: -20px;
-    width: 100%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 45px;
-    min-width: 233px;
+    margin-top: 450px;
+    border-top: 2px solid;
   }
 }
 
 </style>
+
+<!-- Project objectives https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page -->
+<!-- based on example provided by FCC https://codepen.io/freeCodeCamp/full/NdrKKL -->
+
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <nav id="navbar">
   <header>Folium Documentation</header>
   <img 
        src="https://python-visualization.github.io/folium/_images/folium_logo.jpg"
-       class="center"
        >
   <ul>
     <li><a class="nav-link" href="#Intro">Intro</a></li>
-    <li>
-      <a class="nav-link" href="#Concepts">Concepts</a>
-    </li>
-    <li>
-      <a class="nav-link" href="#Installing">Installing</a>
-    </li>
+    <li><a class="nav-link" href="#Concepts">Concepts</a></li>
+    <li><a class="nav-link" href="#Installing">Installing</a></li>
     <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
     <li><a class="nav-link" href="#Reference">Reference</a></li>
   </ul>
@@ -178,10 +165,10 @@ code {
   <section class="main-section" id="Installing">
     <header>Installing</header>
     <article>
-      <p>Requirements</p>
+      <p><u>Requirements</u></p>
       <code>branca, jinja2 and requests.</code>
       <p>Some functionalities may require extra dependencies numpy, pandas, geopandas, altair, etc.</p>
-      <p>Installation</p>
+      <p><u>Installation</u></p>
       <code>$ pip install folium</code>
       <p>or</p>
       <code>$ conda install folium -c conda-forge</code>
@@ -191,7 +178,7 @@ code {
   <section class="main-section" id="Hello_world">
     <header>Hello world</header>
     <article>
-      <p>Quickstart</p>
+      <p><u>Quickstart</u></p>
       <ul>
         <li>To create a base map, simply pass your starting coordinates to Folium:</li>
         <code>import folium</code>
