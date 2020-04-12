@@ -5,3 +5,4 @@ Projects on [CodePen](https://codepen.io/):
 - [Survey Form](https://codepen.io/AlicjaHelenaM/full/poJBORQ)
 - [Product Landing Page](https://codepen.io/AlicjaHelenaM/full/MWwdVZQ)
 - [Technical Documentation](https://codepen.io/AlicjaHelenaM/full/LYVKdNd)
+- [Personal Portfolio](https://codepen.io/AlicjaHelenaM/full/abOgGPe)
